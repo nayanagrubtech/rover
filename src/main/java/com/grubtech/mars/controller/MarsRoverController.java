@@ -17,6 +17,14 @@ public class MarsRoverController implements RoverController {
         this.configuration = configuration;
     }
 
+    public Rover getRover() {
+        return rover;
+    }
+
+    public void setRover(Rover rover) {
+        this.rover = rover;
+    }
+
     @Override
     public void deploy(RoverVector vector) {
         getInitialPositionValidator().validate(vector);
