@@ -21,6 +21,16 @@ public class Rover implements RoverState {
     }
 
     @Override
+    public String getStateCode() {
+        return null;
+    }
+
+    @Override
+    public CartesianPosition getPosition() {
+        return null;
+    }
+
+    @Override
     public void move(){
         state.move();
     }

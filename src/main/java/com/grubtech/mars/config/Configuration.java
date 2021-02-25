@@ -2,12 +2,31 @@ package com.grubtech.mars.config;
 
 import com.grubtech.mars.controller.RoverController;
 
+/**
+ * Configuration holder for system
+ */
 public class Configuration {
 
+    /**
+     * To validate compass points
+     */
     Character[] compassPoints = {'N', 'E', 'S', 'W'};
+
+    /**
+     * Validate instruction
+     * This will limit instructions to followings
+     */
     Character[] roverInstructions = {'M', 'L', 'R'};
+
+    /**
+     * instructions if rover reach cliffs of the planet
+     *  *          *                should it stop moving
+     *  *          *                should it turn
+     *  *          *                if turns, which side (L - left, R - right)
+     */
     Boolean isTurnAtCliff = true;
     Character turnInstructionAtCliff = 'L';
+
     RoverController roverController;
     Integer upperRightXCoordinate = 0;
     Integer upperRightYCoordinate = 0;
